@@ -1,0 +1,10 @@
+keytool -genkey -keyalg RSA -keysize 2648 -validity 360 -alias server -keystore keystore.jks
+	passoword: hello12
+
+keytool -export -alias server -keystore keystore.jks -file server.cert
+
+keytool -import -file server.cert -alias server -keystore trustStore.jts
+
+#localhost:4848 is the server address
+
+C:/Users/12ppa/Documents/Spring 2021/CNT 4403 - Network Security and Principles/Assignments/Final Project/glassfish-5.0.1/glassfish5/glassfish/domains/domain1/config
